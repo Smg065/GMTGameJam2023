@@ -15,7 +15,7 @@ public class NavigationLogic : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (debugCheckGoalPath) CheckGoalPath(goalTransform.position);
         agent.SetDestination(currentGoalPos);

@@ -18,8 +18,9 @@ public class CivilianScript : NavigationLogic
         MoveCivilian(0f);
     }
 
-    void Update()
+    new public void Update()
     {
+        base.Update();
         waitTime -= Time.deltaTime;
         if (waitTime < 0)
         {
