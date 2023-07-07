@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class CivilianScript : NavigationLogic
 {
-    // Start is called before the first frame update
+    public Transform staticWanderCenter;
+    public float waitTime;
+    public void MoveCivilian(float excessTime)
+    {
+        Vector3 p = Random.insideUnitSphere * 5;
+        p.y = 0;
+        goalTransform.position = staticWanderCenter.position + p;
+        waitTime = excessTime + 5f;
+    }
     void Start()
     {
-        
+        MoveCivilian(0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        waitTime -= Time.deltaTime;
+        if (waitTime < 0)
+        {
+            MoveCivilian(waitTime);
+        }
     }
 }
