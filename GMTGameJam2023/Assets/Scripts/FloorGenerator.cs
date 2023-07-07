@@ -12,6 +12,8 @@ public class FloorGenerator : MonoBehaviour
     public GameObject floorPrefab;
     public GameObject ceilingPrefab;
     public GameObject stairsPrefab;
+    public GameObject floorCellPrefab;
+    public GameObject stairCellPrefab;
     public Transform[] doors;
     public Transform[] walls;
     public Transform[] floors;
