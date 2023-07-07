@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class NavigationLogic : MonoBehaviour
 {
     public NavMeshAgent agent;
-    public Vector3 goalPos;
+    public Transform goalPos;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -14,6 +14,6 @@ public class NavigationLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(goalPos);
+        agent.SetDestination(goalPos.position);
     }
 }
