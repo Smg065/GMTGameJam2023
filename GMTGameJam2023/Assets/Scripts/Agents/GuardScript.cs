@@ -32,7 +32,7 @@ public class GuardScript : NavigationLogic
                 //Patrol
                 case 2:
                     //Move to the point
-                    if (CloseEnough(goalTransform.position, 1))
+                    if (CloseEnough(goalTransform.position, 1.5f))
                     {
                         //Wait for 3 seconds
                         waitTime -= Time.deltaTime;
@@ -68,7 +68,7 @@ public class GuardScript : NavigationLogic
         {
             //Move to the point
             CheckGoalPath(goalTransform.position);
-            if (CloseEnough(goalTransform.position, 1))
+            if (CloseEnough(goalTransform.position, 1.5f))
             {
                 //Wait for 3 seconds
                 waitTime -= Time.deltaTime;

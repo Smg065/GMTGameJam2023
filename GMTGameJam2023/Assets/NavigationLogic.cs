@@ -29,7 +29,6 @@ public class NavigationLogic : MonoBehaviour
         NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
         NavMesh.CalculatePath(transform.position, closestPoint.position, 1, pathToGoal);
         Vector3[] goalCorners = pathToGoal.corners;
-        Debug.Log(pathToGoal.corners.Length);
         for (int eachCorner = 1; eachCorner < goalCorners.Length; eachCorner++)
         {
             if (Physics.Linecast(goalCorners[eachCorner - 1] + Vector3.up, goalCorners[eachCorner] + Vector3.up, out RaycastHit foundDoor, doorMask, QueryTriggerInteraction.Ignore))
@@ -45,7 +44,7 @@ public class NavigationLogic : MonoBehaviour
     public bool CloseEnough(Vector3 goalPosition, float minDistance)
     {
         NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
-        return (closestPoint.position - transform.position).magnitude <= minDistance;
+        return (closestPoint.position - (transform.position - transform.up)).magnitude <= minDistance;
 
     }
 }
