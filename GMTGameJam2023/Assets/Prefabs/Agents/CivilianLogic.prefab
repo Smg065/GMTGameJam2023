@@ -51,7 +51,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720753959645451181, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
       propertyPath: m_Name
-      value: CivilianLogic Variant
+      value: CivilianLogic
       objectReference: {fileID: 0}
     - target: {fileID: 8629371835770078908, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
       propertyPath: m_RootOrder
@@ -120,6 +120,11 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 5222009992966300051, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
   m_PrefabInstance: {fileID: 5031210396208667834}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &984666921289312723 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5222009993594926441, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+  m_PrefabInstance: {fileID: 5031210396208667834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1959207063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,5 +144,7 @@ MonoBehaviour:
   doorMask:
     serializedVersion: 2
     m_Bits: 128
+  checkingDoor: 0
+  viewCam: {fileID: 984666921289312723}
   staticWanderCenter: {fileID: 3374843443817974369}
   waitTime: 0

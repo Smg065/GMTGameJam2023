@@ -10,6 +10,8 @@ public class NavigationLogic : MonoBehaviour
     public Vector3 currentGoalPos;
     public bool debugCheckGoalPath;
     public LayerMask doorMask;
+    public bool checkingDoor;
+    public Camera viewCam;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -20,21 +22,30 @@ public class NavigationLogic : MonoBehaviour
         if (debugCheckGoalPath) CheckGoalPath(goalTransform.position);
         agent.SetDestination(currentGoalPos);
     }
-    void CheckGoalPath(Vector3 goalPosition)
+    //See if you can walk there without needing to open doors
+    public void CheckGoalPath(Vector3 goalPosition)
     {
         NavMeshPath pathToGoal = new NavMeshPath();
-        NavMesh.CalculatePath(transform.position, goalPosition, 1, pathToGoal);
+        NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
+        NavMesh.CalculatePath(transform.position, closestPoint.position, 1, pathToGoal);
         Vector3[] goalCorners = pathToGoal.corners;
         Debug.Log(pathToGoal.corners.Length);
         for (int eachCorner = 1; eachCorner < goalCorners.Length; eachCorner++)
         {
             if (Physics.Linecast(goalCorners[eachCorner - 1] + Vector3.up, goalCorners[eachCorner] + Vector3.up, out RaycastHit foundDoor, doorMask, QueryTriggerInteraction.Ignore))
             {
-                Debug.Log("Door Found!");
+                checkingDoor = true;
                 currentGoalPos = foundDoor.point - ((goalCorners[eachCorner] - goalCorners[eachCorner - 1]).normalized * 1.5f);
                 return;
             }
         }
+        checkingDoor = false;
         currentGoalPos = goalTransform.position;
+    }
+    public bool CloseEnough(Vector3 goalPosition, float minDistance)
+    {
+        NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
+        return (closestPoint.position - transform.position).magnitude <= minDistance;
+
     }
 }

@@ -56,6 +56,8 @@ MonoBehaviour:
   doorMask:
     serializedVersion: 2
     m_Bits: 128
+  checkingDoor: 0
+  viewCam: {fileID: 5222009993594926441}
 --- !u!33 &5222009992966300061
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -197,9 +199,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5222009993594926446}
   - component: {fileID: 5222009993594926441}
-  - component: {fileID: 5222009993594926440}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: ViewCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +227,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5222009993594926443}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.1792453, g: 0.2846444, b: 0.7169812, a: 0}
@@ -238,16 +239,16 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.7
+    y: 0.2
+    width: 0.25
+    height: 0.2
   near clip plane: 0.3
-  far clip plane: 10
+  far clip plane: 40
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -262,14 +263,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5222009993594926440
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5222009993594926443}
-  m_Enabled: 1
 --- !u!1 &5720753959645451181
 GameObject:
   m_ObjectHideFlags: 0
