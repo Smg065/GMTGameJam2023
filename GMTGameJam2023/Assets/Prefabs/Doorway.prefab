@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 1, z: 1}
+  m_Center: {x: -0.05, y: 0, z: 0}
 --- !u!54 &675126148427298214
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,10 +124,10 @@ HingeJoint:
   m_GameObject: {fileID: 675126148427298209}
   m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0.425, y: 0, z: -1}
+  m_Anchor: {x: 0.45, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.84150004, y: -0.5, z: 0.3}
+  m_ConnectedAnchor: {x: 0.891, y: -0.5, z: 0.4}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -141,7 +141,7 @@ HingeJoint:
   m_UseLimits: 1
   m_Limits:
     min: -100
-    max: 0
+    max: 100
     bounciness: 0.1
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -274,8 +274,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675126148884430402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.75, z: 0.25}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0.9, y: 0.75, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 675126149335604039}
   m_RootOrder: 1
@@ -355,8 +355,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675126148953692249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -1.75, z: 0.25}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0.9, y: -1.75, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 675126149335604039}
   m_RootOrder: 3
@@ -484,8 +484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675126149435091475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -0.5, z: 0.25}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0.9, y: -0.5, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 675126149335604039}
   m_RootOrder: 2
