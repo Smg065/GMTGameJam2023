@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0c2f9413f90af546a2e5874b2008347, type: 2}
+  - {fileID: 2100000, guid: 3f271708abd174449bc71e43ad684ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0431b5504489c6149ad9335c069c2bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleMulti: {x: 0.25, y: 0.25}
 --- !u!1 &830022928984795966
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0c2f9413f90af546a2e5874b2008347, type: 2}
+  - {fileID: 2100000, guid: 3f271708abd174449bc71e43ad684ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0431b5504489c6149ad9335c069c2bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleMulti: {x: 0.25, y: 0.25}
 --- !u!1 &1869624572242607115
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +250,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0c2f9413f90af546a2e5874b2008347, type: 2}
+  - {fileID: 2100000, guid: 3f271708abd174449bc71e43ad684ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -282,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0431b5504489c6149ad9335c069c2bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleMulti: {x: 0.25, y: 0.25}
 --- !u!1 &2311748658318014471
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0c2f9413f90af546a2e5874b2008347, type: 2}
+  - {fileID: 2100000, guid: 3f271708abd174449bc71e43ad684ed2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -521,3 +524,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0431b5504489c6149ad9335c069c2bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleMulti: {x: 0.25, y: 0.25}
