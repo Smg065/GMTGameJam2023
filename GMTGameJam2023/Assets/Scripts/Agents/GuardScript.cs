@@ -65,6 +65,27 @@ public class GuardScript : NavigationLogic
                         CheckGoalPath(goalTransform.position);
                     }
                     break;
+                //Emily Search
+                case 4:
+                    //Wait for a random amount of time seconds
+                    if (CloseEnough(goalTransform.position, 1.5f))
+                    {
+                        waitTime -= Time.deltaTime;
+                        if (waitTime <= 0)
+                        {
+                            //Once you're done waiting, move to another random point
+                            //waitTime += Random.Range((guardWaypoint1.position - guardWaypoint2.position).magnitude,(guardWaypoint1.position - guardWaypoint2.position).magnitude) * 2;
+                            //Debug.Log((guardWaypoint1.position - guardWaypoint2.position).magnitude);
+                            //waitTime += Mathf.Log((guardWaypoint1.position - guardWaypoint2.position).magnitude * 100);
+                            waitTime += 3f;
+                            Vector3 randomPoint = Random.insideUnitSphere;
+                            randomPoint = randomPoint.normalized * (guardWaypoint1.position - guardWaypoint2.position).magnitude;
+                            randomPoint.y = 0;
+                            goalTransform.position = guardWaypoint1.position + randomPoint;
+                            CheckGoalPath(goalTransform.position);
+                        }
+                    }
+                    break;
             }
         }
         else
