@@ -17,7 +17,9 @@ public class GuardScript : NavigationLogic
     {
         if (!searchOverride)
         {
-            switch (guardMode)
+            int guardModeToUse = guardMode;
+            if (guardChaseTarget != null) guardModeToUse = 1;
+            switch (guardModeToUse)
             {
                 //Stand Guard
                 case 0:

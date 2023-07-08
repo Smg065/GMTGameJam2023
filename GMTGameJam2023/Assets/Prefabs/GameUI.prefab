@@ -3037,7 +3037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace94c35696cf20448999d485b366222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastGuardCam: {fileID: 0}
+  securityCamera: {fileID: 0}
+  clickables:
+    serializedVersion: 2
+    m_Bits: 1992
+  lastGuard: 0
   allGuards:
   - {fileID: 0}
   - {fileID: 0}
