@@ -21,7 +21,6 @@ public class NavigationLogic : MonoBehaviour
     {
         if (debugCheckGoalPath) CheckGoalPath(goalTransform.position);
         agent.SetDestination(currentGoalPos);
-        TryOpenDoor();
     }
     //See if you can walk there without needing to open doors
     public void CheckGoalPath(Vector3 goalPosition)
@@ -29,17 +28,6 @@ public class NavigationLogic : MonoBehaviour
         NavMeshPath pathToGoal = new NavMeshPath();
         NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
         NavMesh.CalculatePath(transform.position, closestPoint.position, 1, pathToGoal);
-        Vector3[] goalCorners = pathToGoal.corners;
-        for (int eachCorner = 1; eachCorner < goalCorners.Length; eachCorner++)
-        {
-            if (Physics.Linecast(goalCorners[eachCorner - 1] + Vector3.up, goalCorners[eachCorner] + Vector3.up, out RaycastHit foundDoor, doorMask, QueryTriggerInteraction.Ignore))
-            {
-                checkingDoor = foundDoor.transform;
-                currentGoalPos = foundDoor.point - ((goalCorners[eachCorner] - goalCorners[eachCorner - 1]).normalized * 1.5f);
-                return;
-            }
-        }
-        checkingDoor = null;
         currentGoalPos = goalTransform.position;
     }
     public bool CloseEnough(Vector3 goalPosition, float minDistance)
@@ -47,13 +35,5 @@ public class NavigationLogic : MonoBehaviour
         NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
         return (closestPoint.position - (transform.position - transform.up)).magnitude <= minDistance;
 
-    }
-    public void TryOpenDoor()
-    {
-        if (checkingDoor != null && CloseEnough(checkingDoor.position, 3))
-        {
-            checkingDoor.localEulerAngles += Vector3.up * Time.deltaTime * -180;
-        }
-        else CheckGoalPath(goalTransform.position);
     }
 }

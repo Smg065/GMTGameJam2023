@@ -56,7 +56,7 @@ MonoBehaviour:
   doorMask:
     serializedVersion: 2
     m_Bits: 128
-  checkingDoor: 0
+  checkingDoor: {fileID: 0}
   viewCam: {fileID: 5222009993594926441}
 --- !u!33 &5222009992966300061
 MeshFilter:
@@ -251,7 +251,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 6143
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

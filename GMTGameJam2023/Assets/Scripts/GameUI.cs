@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
@@ -17,6 +18,13 @@ public class GameUI : MonoBehaviour
     public int patrolSetMode;
     public Image[] patrolModeHighlight;
     public Transform wanderRadius;
+    public LineRenderer patrolLine;
+    public BillboardRenderer guardStand;
+    public Material billboardMat;
+    public Transform guardPointIcon;
+    public Transform guardPointSubicon;
+    public Transform alertIcon;
+    public Transform alertSubicon;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +106,16 @@ public class GameUI : MonoBehaviour
 
         //Switch guard display mode
         DisplayGuardMode();
+
+        //Make the icons face the right cams
+        guardPointIcon.LookAt(securityCameras[currentCamera].transform.position, Vector3.up);
+        alertIcon.LookAt(securityCameras[currentCamera].transform.position, Vector3.up);
+        if (lastGuard != -1)
+        {
+            guardPointSubicon.LookAt(allGuards[lastGuard].transform.position, Vector3.up);
+            alertSubicon.LookAt(allGuards[lastGuard].transform.position, Vector3.up);
+        }
+
     }
     public void ChangeLastGuardPriorities()
     {
@@ -156,21 +174,35 @@ public class GameUI : MonoBehaviour
         if (lastGuard != -1)
         {
             if (allGuards[lastGuard].guardChaseTarget != null) effectivePatrol = 1;
+            alertIcon.gameObject.SetActive(allGuards[lastGuard].searchOverride);
+            if (allGuards[lastGuard].searchOverride)
+            {
+                alertIcon.transform.position = allGuards[lastGuard].currentGoalPos + Vector3.up;
+            }
         }
-        else effectivePatrol = -1;
+        else
+        {
+            effectivePatrol = -1;
+            alertIcon.gameObject.SetActive(false);
+        }
         //Show the active elements
         for (int eachHighlight = 0; eachHighlight < 4; eachHighlight++)
         {
             patrolModeHighlight[eachHighlight].gameObject.SetActive(effectivePatrol == eachHighlight);
         }
+        patrolLine.gameObject.SetActive(effectivePatrol == 2 || effectivePatrol == 1);
         wanderRadius.gameObject.SetActive(effectivePatrol == 3);
+        guardPointIcon.gameObject.SetActive(effectivePatrol == 0);
         switch (effectivePatrol)
         {
             case 0:
+                guardPointIcon.transform.position = allGuards[lastGuard].guardWaypoint1.position + Vector3.up;
                 break;
             case 1:
+                DrawPathLine(allGuards[lastGuard].transform.position, allGuards[lastGuard].guardChaseTarget.position);
                 break;
             case 2:
+                DrawPathLine(allGuards[lastGuard].guardWaypoint1.position, allGuards[lastGuard].guardWaypoint2.position);
                 break;
             case 3:
                 wanderRadius.transform.position = allGuards[lastGuard].guardWaypoint1.position;
@@ -185,5 +217,17 @@ public class GameUI : MonoBehaviour
         patrolSetMode = newMode;
         allGuards[lastGuard].guardChaseTarget = null;
         allGuards[lastGuard].guardMode = newMode;
+    }
+    public void DrawPathLine(Vector3 pos1, Vector3 pos2)
+    {
+        NavMeshPath currentPath = new NavMeshPath();
+        NavMesh.CalculatePath(pos1, pos2, 1, currentPath);
+        patrolLine.numCornerVertices = currentPath.corners.Length;
+        patrolLine.positionCount = currentPath.corners.Length;
+        //Corners
+        for (int eachCorner = 0; eachCorner < currentPath.corners.Length; eachCorner++)
+        {
+            patrolLine.SetPosition(eachCorner, currentPath.corners[eachCorner] + Vector3.up);
+        }
     }
 }

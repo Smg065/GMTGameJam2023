@@ -24,6 +24,7 @@ public class GuardScript : NavigationLogic
                 //Stand Guard
                 case 0:
                     goalTransform.position = guardWaypoint1.position;
+                    CheckGoalPath(goalTransform.position);
                     break;
                 //Follow
                 case 1:
