@@ -58,6 +58,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 5222009993594926441}
+  navRefreshRate: 0
 --- !u!33 &5222009992966300061
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ Camera:
   m_GameObject: {fileID: 5222009993594926443}
   m_Enabled: 0
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.1792453, g: 0.2846444, b: 0.7169812, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -244,7 +245,7 @@ Camera:
     width: 0.25
     height: 0.2
   near clip plane: 0.3
-  far clip plane: 40
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
