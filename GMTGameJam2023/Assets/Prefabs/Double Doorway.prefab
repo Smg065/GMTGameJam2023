@@ -40,6 +40,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 8526948932015444283}
     m_Modifications:
     - target: {fileID: 4067927648454001756, guid: e814ebbab1a097a49b3864537c114d31, type: 3}
+      propertyPath: m_Spring.damper
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067927648454001756, guid: e814ebbab1a097a49b3864537c114d31, type: 3}
+      propertyPath: m_Spring.spring
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067927648454001756, guid: e814ebbab1a097a49b3864537c114d31, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -1.891
       objectReference: {fileID: 0}
@@ -109,6 +117,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8526948932015444283}
     m_Modifications:
+    - target: {fileID: 675126148427298215, guid: 553f6ba78f32d4e40a5c0da4530768c0, type: 3}
+      propertyPath: m_Spring.damper
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 675126148427298215, guid: 553f6ba78f32d4e40a5c0da4530768c0, type: 3}
+      propertyPath: m_Spring.spring
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 675126148427298215, guid: 553f6ba78f32d4e40a5c0da4530768c0, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 1.891
