@@ -77,7 +77,8 @@ public class GameUI : MonoBehaviour
                             {
                                 //Follow guards, civilians, or theives if they're clicked
                                 case int n when n >= 8 && n <= 10:
-                                    allGuards[lastGuard].guardChaseTarget = clickedItem.transform;
+                                    if (clickedItem.transform != allGuards[lastGuard].transform) allGuards[lastGuard].guardChaseTarget = clickedItem.transform;
+                                    else allGuards[lastGuard].guardChaseTarget = null;
                                     break;
                                 //Change Patrol Type
                                 default:
