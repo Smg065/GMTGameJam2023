@@ -55,8 +55,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5222009992966300048, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+--- !u!4 &7700337547680628107 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5222009993434968690, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+  m_PrefabInstance: {fileID: 2496496506083741689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7700337548155678311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5222009992966300062, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+  m_PrefabInstance: {fileID: 2496496506083741689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7700337548155678315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5222009992966300050, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
@@ -67,6 +78,44 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5222009992966300060, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
   m_PrefabInstance: {fileID: 2496496506083741689}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &7700337548155678314 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 5222009992966300051, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+  m_PrefabInstance: {fileID: 2496496506083741689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &7700337547844778640 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5222009993594926441, guid: 471b1716b6cad9c4685b37e7ca257362, type: 3}
+  m_PrefabInstance: {fileID: 2496496506083741689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6667855527506341787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700337548155678311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f63a6d4a1ace3246b2a932504779aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 7700337548155678314}
+  goalTransform: {fileID: 7700337547680628107}
+  currentGoalPos: {x: 0, y: 0, z: 0}
+  debugCheckGoalPath: 0
+  doorMask:
+    serializedVersion: 2
+    m_Bits: 128
+  checkingDoor: {fileID: 0}
+  viewCam: {fileID: 7700337547844778640}
+  navRefreshRate: 0
+  thiefMode: 0
+  searchOverride: 0
+  goalTarget: {fileID: 0}
+  exitTarget: {fileID: 0}
+  patrolFirstPoint: 0
+  waitTime: 0
 --- !u!1001 &4342521434192652421
 PrefabInstance:
   m_ObjectHideFlags: 0
