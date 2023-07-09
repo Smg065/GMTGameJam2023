@@ -84,6 +84,7 @@ public class GameUI : MonoBehaviour
                                     ChangeLastGuardPriorities();
                                     allGuards[lastGuard].guardWaypoint1.position = clickedItem.point;
                                     allGuards[lastGuard].patrolFirstPoint = true;
+                                    allGuards[lastGuard].goalTransform.position = clickedItem.point;
                                     break;
                             }
                         }
@@ -99,6 +100,7 @@ public class GameUI : MonoBehaviour
                         ChangeLastGuardPriorities();
                         allGuards[lastGuard].guardWaypoint2.position = clickedItem.point;
                         allGuards[lastGuard].patrolFirstPoint = false;
+                        allGuards[lastGuard].goalTransform.position = clickedItem.point;
                     }
                 }
             }

@@ -6146,14 +6146,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WanderRadius
       objectReference: {fileID: 0}
-    - target: {fileID: 7255630073183009666, guid: 0e4cd178fdf09ca4c9b4d8af6081ce73, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1806698700789873819, guid: 392fa2644d1263d45bbc58314c944d35, type: 3}
-    - target: {fileID: 7348818627982591568, guid: 0e4cd178fdf09ca4c9b4d8af6081ce73, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1806698700789873819, guid: 392fa2644d1263d45bbc58314c944d35, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e4cd178fdf09ca4c9b4d8af6081ce73, type: 3}
 --- !u!1001 &1508268906986865647
