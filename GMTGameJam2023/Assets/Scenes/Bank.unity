@@ -250,6 +250,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 2025552632}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 1793610624}
@@ -421,6 +422,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1122029445}
+  navRefreshRate: 0
   guardMode: 0
   searchOverride: 0
   guardWaypoint1: {fileID: 745935006}
@@ -587,6 +589,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 121126193}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 960299928}
@@ -1286,6 +1289,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 2065661016}
+  navRefreshRate: 0
   guardMode: 0
   searchOverride: 0
   guardWaypoint1: {fileID: 250872256}
@@ -1994,6 +1998,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1449290518}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 962048314}
@@ -2761,6 +2766,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1534914343}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 1636557511}
@@ -2998,6 +3004,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1425083996}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 406987378}
@@ -4042,6 +4049,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1554959408}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 783178480}
@@ -4491,6 +4499,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1174932235}
+  navRefreshRate: 0
   guardMode: 0
   searchOverride: 0
   guardWaypoint1: {fileID: 1864875679}
@@ -5203,6 +5212,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 2020326584}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 680144871}
@@ -5790,6 +5800,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1779682310}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 1711076728}
@@ -6462,6 +6473,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 490213984}
+  navRefreshRate: 0
   guardMode: 0
   searchOverride: 0
   guardWaypoint1: {fileID: 460652257}
@@ -6703,6 +6715,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 985804669}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 501745824}
@@ -8402,6 +8415,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 283988332}
+  navRefreshRate: 0
   guardMode: 3
   searchOverride: 0
   guardWaypoint1: {fileID: 1709541193}
@@ -8696,6 +8710,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1074286700}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 1971740754}
@@ -9390,6 +9405,7 @@ MonoBehaviour:
     m_Bits: 128
   checkingDoor: {fileID: 0}
   viewCam: {fileID: 1626648887}
+  navRefreshRate: 0
   guardMode: 2
   searchOverride: 0
   guardWaypoint1: {fileID: 1868210125}
@@ -9405,7 +9421,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891377798}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
