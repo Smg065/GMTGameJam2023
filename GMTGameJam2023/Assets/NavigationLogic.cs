@@ -12,6 +12,7 @@ public class NavigationLogic : MonoBehaviour
     public LayerMask doorMask;
     public Transform checkingDoor;
     public Camera viewCam;
+    public float navRefreshRate;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -20,14 +21,16 @@ public class NavigationLogic : MonoBehaviour
     public void Update()
     {
         if (debugCheckGoalPath) CheckGoalPath(goalTransform.position);
-        agent.SetDestination(currentGoalPos);
+        navRefreshRate -= Time.deltaTime;
+        if (navRefreshRate <= 0)
+        {
+            agent.SetDestination(currentGoalPos);
+            navRefreshRate += .25f;
+        }
     }
     //See if you can walk there without needing to open doors
     public void CheckGoalPath(Vector3 goalPosition)
     {
-        NavMeshPath pathToGoal = new NavMeshPath();
-        NavMesh.SamplePosition(goalPosition, out NavMeshHit closestPoint, 100, 1);
-        NavMesh.CalculatePath(transform.position, closestPoint.position, 1, pathToGoal);
         currentGoalPos = goalTransform.position;
     }
     public bool CloseEnough(Vector3 goalPosition, float minDistance)
