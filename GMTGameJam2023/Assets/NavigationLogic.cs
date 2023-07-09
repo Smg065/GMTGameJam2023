@@ -13,7 +13,7 @@ public class NavigationLogic : MonoBehaviour
     public Transform checkingDoor;
     public Camera viewCam;
     public float navRefreshRate;
-    private void Start()
+    public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }

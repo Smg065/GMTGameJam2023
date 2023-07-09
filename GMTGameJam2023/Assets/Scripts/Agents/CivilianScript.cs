@@ -13,8 +13,9 @@ public class CivilianScript : NavigationLogic
         goalTransform.position = staticWanderCenter.position + p;
         waitTime = excessTime + 5f;
     }
-    void Start()
+    new void Start()
     {
+        base.Start();
         MoveCivilian(0f);
     }
 

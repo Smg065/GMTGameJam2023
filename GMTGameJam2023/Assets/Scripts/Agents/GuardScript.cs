@@ -11,7 +11,11 @@ public class GuardScript : NavigationLogic
     public Transform guardChaseTarget;
     public float waitTime;
     public bool patrolFirstPoint;
-
+    new public void Start()
+    {
+        base.Start();
+        currentGoalPos = guardWaypoint1.transform.position;
+    }
     // Update is called once per frame
     new void Update()
     {
