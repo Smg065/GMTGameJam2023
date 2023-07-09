@@ -160,7 +160,8 @@ MonoBehaviour:
   doorMask:
     serializedVersion: 2
     m_Bits: 128
-  checkingDoor: 0
+  checkingDoor: {fileID: 0}
   viewCam: {fileID: 984666921289312723}
+  navRefreshRate: 0
   staticWanderCenter: {fileID: 3374843443817974369}
   waitTime: 0
