@@ -14,7 +14,8 @@ public class GuardScript : NavigationLogic
     new public void Start()
     {
         base.Start();
-        currentGoalPos = guardWaypoint1.transform.position; 
+        currentGoalPos = guardWaypoint1.transform.position;
+        if (guardMode == 2 || guardMode == 0) goalTransform.position = guardWaypoint1.position;
         CheckGoalPath(goalTransform.position);
     }
     // Update is called once per frame
